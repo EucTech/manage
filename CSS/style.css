@@ -1,21 +1,35 @@
-body{
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --orange-color: hsl(12, 88%, 59%);
+    --orangehovercover:hsl(10, 85%, 69%);
+    --lightgray: hsl(227, 12%, 61%);
+    --darkgray: hsl(228, 39%, 23%);
+    --verydarkgray: hsl(233, 12%, 13%);
+    --white: hsl(0, 0%, 100%);
+    --lightergraycolor: hsl(0, 0%, 98%);
 }
 
 a{
     text-decoration: none;
 }
 
+html,body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 #nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 120px 60px 140px;
+    padding: 40px 120px 60px 120px;
     font-size: 14px;
-     
 }
 
 .navlink {
@@ -25,31 +39,61 @@ a{
 }
 
 .navlink a{
-    color: hsl(228, 39%, 23%);
+    color: var(--darkgray);
 }
 
 .navlink a:hover{
-    color: rgb(168, 165, 165);
+    color: var(--lightgray);
 }
 
 .get-started {
     font-size: 12px;
-    background-color: hsl(12, 88%, 59%);
+    background-color: var(--orange-color);
     padding: 14px 35px;
     border-radius: 50px;
-    color: #fff;
-    box-shadow: 2px 3px 5px  hsl(12, 85%, 64%);
+    color: var(--white);
+    box-shadow: 2px 3px 5px  var(--orange-color);
 }
 
 .get-started:hover{
-    background-color: hsl(12, 85%, 64%);
+    background-color: var(--orangehovercover);
 }
+/* 
+.bgSection{
+    background-image: url(/images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-y: -200px;
+    background-size: contain;
+} */
+
+/* .bgSection2 {
+    background-image: url(/images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: -500px;
+} */
+
+/* .bgSection3 {
+    background-image: url(/images/bg-tablet-pattern.svg);
+    background-position: left;
+
+} */
 
 #hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 120px 40px 140px;
+    padding: 30px 120px 40px 120px;
+    position: relative;
+}
+
+#hero .bg{
+    position: absolute;
+    z-index: -1;
+    top: -40%;
+    right: -5%;
+    width: 50%;
 }
 
 #hero img {
@@ -62,7 +106,7 @@ a{
 
 #hero div h1{
     font-size: 50px;
-    color: hsl(228, 39%, 23%);
+    color: var(--darkgray);
     font-weight: 700; 
 }
 
@@ -70,62 +114,117 @@ a{
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 50px;
-    color:  hsl(227, 12%, 61%);
+    color:  var(--lightgray);
 }
 
 .main1 {
-    padding: 30px 120px 120px 140px;
+    padding: 30px 120px 120px 120px;
     display: flex;
-    justify-content: space-between;
-    gap: 40px;  
+    gap: 100px;  
 }
 
 .main {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
 }
 
+.main2 {
+    width: 60%;
+}
+
+
+.main h2 {
+    font-size: 16px;
+    color: var(--darkgray);
+}
+
+.main-head {
+    width: 50%;
+    position: relative;
+}
+
+.main-head img{
+    position: absolute;
+    z-index: -1;
+    left: -80%;
+    top: 50%;
+    width: 130%;
+}
+
+.main-head h1 {
+    font-size: 38px;
+    color: var(--darkgray);
+    padding-bottom: 20px;
+}
+
+.main-head p {
+    font-size: 16px;
+    color: var(--lightgray);
+    line-height: 1.5;
+}
+
+.p1{
+    background-color: var(--orange-color);
+    color: var(--white);
+    padding: 8px 25px;
+    border-radius: 50px;
+}
+
+.mainText{
+    margin-left: 6rem;
+    padding: 10px 0;  
+    font-size: 16px;
+    color: var(--lightgray);
+    line-height: 1.5;
+}
+
+.ss {
+    padding-bottom: 40px;
+}
 
 #testimonials {
     text-align: center;
     margin-bottom: 200px;
-    
 }
 
 #testimonials h1 {
     font-size: 40px;
-    color: hsl(228, 39%, 23%);
+    color: var(--darkgray);
     padding-bottom: 20px;
 }
 
 #testimonials .alltest .test img{
     width: 18%;
+    margin-top: -40px;
 }
 
 .alltest {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 20px !important;
     text-align: center;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     
 }
 
 .test {
-    background-color: hsl(0, 0%, 98%);
-    width: 40%;
-    padding: 5px 15px;
+    background-color: var(--lightergraycolor);
+    width: 50%;
+    padding: 10px 20px;
+    /* margin-top: 80px; */
+    margin:80px 20px 0;
 }
 
 .test h3 {
     font-size: 16px;
-    color: hsl(228, 39%, 23%);
+    color: var(--darkgray);
 }
 
 .test p {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.5;
-    color: hsl(227, 12%, 61%);
+    color: var(--lightgray);
 }
 
 #red  {
@@ -133,20 +232,35 @@ a{
     justify-content: space-between;
     gap: 20%;
     align-items: center;
-    background-color: hsl(12, 88%, 59%);
+    background-color: var(--orange-color);
     height: 200px;
-    padding: 10px 100px 10px 140px; 
+    padding: 10px 100px 10px 140px;
+    position: relative;
+    z-index: 1;
+}
+
+#red .bg1 {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    top: -50%;
+}
+
+#red div{
+    width: 50%;
 }
 
 #red div p {
     font-size: 40px;
     color: #fff;
-    width: 80%;
+    font-weight: 600;
+    position: relative;
+    z-index: 3;
 }
 
 #red .btn {
     background-color: #fff;
-    color: hsl(12, 88%, 59%);
+    color: var(--orange-color);
     padding: 14px 35px;
     border-radius: 50px;
     font-size: 12px;
@@ -158,7 +272,9 @@ a{
     justify-content: space-between;
     background-color: hsl(233, 12%, 13%);
     color: #fff;
-    padding: 60px 100px 60px 150px; 
+    padding: 60px 100px 60px 150px;
+    position: relative;
+    z-index: 3;
 }
 
 .main-footer a{
@@ -167,7 +283,7 @@ a{
 }
 
 .main-footer a:hover {
-    color: hsl(12, 88%, 59%);
+    color: var(--orange-color);
 }
 
 .icon {
@@ -181,6 +297,7 @@ a{
 
 .main-footer img {
     padding-bottom: 80px;
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
 }
 
 .lastpart {
@@ -189,21 +306,395 @@ a{
     gap: 150px;
 }
 
-.lastpart-1 {
-    display: grid;
-    gap: 10px;
+.lastpart-1, .lastpart-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.lastpart-2 {
-    display: grid;
+.go form{
+    display: flex;
+    align-items: center;
     gap: 10px;
-}
-
-.go button {
-    margin-bottom: 50px;
 }
 
 .go p {
     font-size: 12px;
+    margin-top: 80px;
 }
+
+.email{
+    outline: none;
+    height: 40px;
+    width: 200px;
+    padding-left: 16px;
+    border-radius: 50px;
+    border: none;
+}
+
+.goBTN {
+    width: 60px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--orange-color);
+}
+
+.goBTN:hover {
+    background-color:var(--orangehovercover);
+}
+
+
+@media only screen and (max-width: 1200px)  {
+#nav{
+    padding: 40px 60px;
+}
+
+.navlink {
+    gap: 50px;
+}
+
+#hero{
+    padding: 40px 60px;
+}
+
+#hero div h1{
+    font-size: 40px;
+}
+
+.main1{
+    padding: 40px 60px;
+    gap: 35px;
+} 
+
+.main-head{
+    width: 40%;
+}
+
+.main-head h1{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#testimonials{
+    margin-bottom: 150px;
+}
+
+#red{
+    padding: 40px 60px;
+    gap: 10%;
+}
+
+.main-footer{
+    padding: 40px 60px;
+}
+
+#red div p {
+    font-size: 35px;
+}
+
+}
+
+
+@media only screen and (max-width: 992px)  {
+.navlink{
+    gap: 15px;
+}
+
+#hero div{
+    width: 50%;
+}
+
+#hero div h1{
+    font-size: 30px;
+}
+ 
+.lastpart{
+    gap: 50px;
+}
+
+#red {
+    padding: 40px 35px;
+}
+
+.main-footer{
+    padding: 40px 35px;
+    gap: 40px;
+}
+}
+
+@media only screen and (max-width: 768px)  {
+#nav{
+    padding: 20px;
+    font-size: 12px;
+}
+#nav img{
+    width: 20%;
+}
+
+.navlink{
+    gap: 10px;
+}
+
+.get-started{
+    padding: 10px 20px;
+}
+
+#hero{
+    padding: 40px 20px;
+}
+
+#hero div h1{
+    font-size: 25px;
+    padding-bottom: 5px;
+}
+
+#hero div{
+    width: 40%;
+}
+
+#hero div p{
+    font-size: 12px;
+    
+}
+
+.main1 {
+    padding: 40px 15px;
+}
+
+.main-head{
+    width: 40%;
+}
+
+.main-head h1{
+    font-size: 25px;
+}
+
+.main-head p{
+    font-size: 14px;
+}
+
+.main{
+    gap: 10px;
+}
+
+.main h2{
+    /* font-size: 12px; */
+}
+
+.mainText{
+    margin-left: 4rem;
+    font-size: 14px;
+}
+
+.ss{
+    padding-bottom: 30px;
+}
+
+.p1{
+    padding: 5px 15px
+}
+
+#red{
+    padding: 40px 15px;
+}
+
+#red div p{
+    font-size: 23px;
+}
+
+#red .btn{
+    padding: 10px 20px; 
+}
+
+.main-footer{
+    padding: 40px 15px;
+    gap: 20px;
+}
+
+.email{
+    height: 30px;
+    width: 130px;
+}
+
+.goBTN{
+    width: 40px;
+    height: 28px;
+}
+
+.lastpart{
+    gap: 20px;
+}
+}
+
+@media only screen and (max-width: 576px){
+.lastpart{
+    gap: 150px;
+}
+
+.email{
+    width: 200px;
+    height: 40px;
+}
+
+.goBTN{
+    width: 60px;
+    height: 40px;
+}
+
+.go form{
+    padding-top: 20px;
+}
+
+.go{
+    text-align: center;
+}
+
+#hero div h1{
+    font-size: 20px;
+}
+
+#hero img{
+    width: 55%;
+}
+
+.main-head h1{
+    font-size: 20px;
+}
+
+.main-head p{
+    font-size: 14px;
+}
+
+.p1{
+    padding: 2px 10px;
+}
+
+.mainText{
+    font-size: 14px;
+    margin-left: 3rem;
+}
+
+.main-footer{
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-footer img{
+    padding-bottom: 30px;
+}
+
+.go p{
+    margin-top: 30px;
+}
+
+
+}
+
+@media only screen and (max-width: 480px){
+#hero{
+    flex-direction: column-reverse;
+    padding: 20px;
+}
+
+#hero img{
+    width: 100%;
+}
+
+#hero div{
+    width: 100%;
+    text-align: center;
+    padding: 20px 30px;
+}
+
+#hero div h1{
+    font-size: 30px;
+}
+
+#hero div p{
+    font-size: 16px;
+}
+
+.get-started{
+    padding: 14px 35px;
+}
+
+#red{
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#red div p{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#red div{
+    width: 80%;
+}
+
+.main1{
+    flex-direction: column;
+}
+
+.main-head{
+    text-align: center;
+}
+
+.main-head, .main2{
+    width: 100%;
+}
+
+.main{
+    background-color: hsla(10, 100%, 83%, 0.664);
+    border-radius: 50px 0 0 50px;
+}
+
+.mainText{
+    margin-left: 0;
+}
+
+.p1{
+    padding: 8px 22px;
+}
+
+.mainText{
+    font-size: 16px;
+    line-height: 2;
+}
+
+.main-head p{
+    font-size: 16px;
+}
+
+}
+
+/* @media only screen and (max-width: 375px){
+    #hero{
+        flex-direction: column-reverse;
+    }
+    
+    #hero img{
+        width: 100%;
+    }
+    
+    #hero div{
+        width: 100%;
+        text-align: center;
+        padding: 20px 30px;
+    }
+    
+    #hero div h1{
+        font-size: 40px;
+    }
+    
+    #hero div p{
+        font-size: 16px;
+    }
+    
+    }
+     */
+
 
