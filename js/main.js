@@ -17,7 +17,7 @@ $('.alltest').slick({
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 900,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -27,7 +27,7 @@ $('.alltest').slick({
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 500,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -41,3 +41,26 @@ $('.alltest').slick({
       // instead of a settings object
     ]
   });
+
+const navlinks = document.querySelector('.navlink')
+const navlinksEl = document.querySelectorAll('.navlink a')
+const navOpen = document.querySelector('.open')
+const navClose = document.querySelector('.close')
+
+function openNav(){
+  navlinks.style.top = "40%";
+  navOpen.style.display = "none"
+  navClose.style.display = "block"
+}
+
+function closeNav(){
+  navlinks.style.top = "-40%";
+  navOpen.style.display = "block"
+  navClose.style.display = "none"
+}
+
+navlinksEl.forEach(navLink => {
+  navLink.addEventListener('click', function(){
+    closeNav()
+  })
+})

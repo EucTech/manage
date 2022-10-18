@@ -24,6 +24,10 @@ html,body {
     scroll-behavior: smooth;
 }
 
+.navToggle{
+    display: none;
+}
+
 #nav {
     display: flex;
     justify-content: space-between;
@@ -196,7 +200,7 @@ html,body {
 
 #testimonials .alltest .test img{
     width: 18%;
-    margin-top: -40px;
+    margin: -40px auto 0;
 }
 
 .alltest {
@@ -204,13 +208,18 @@ html,body {
     justify-content: space-between;
     gap: 20px !important;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 60px;
     
+}
+
+.slick-dots{
+    padding: 40px 0 40px;
 }
 
 .test {
     background-color: var(--lightergraycolor);
     width: 50%;
+    height: 50%;
     padding: 10px 20px;
     /* margin-top: 80px; */
     margin:80px 20px 0;
@@ -345,6 +354,19 @@ html,body {
 }
 
 
+@media only screen and (max-width: 1440px)  {
+    .go p{
+        margin-top: 30px;
+        display: block;
+    }
+    
+    .mc p{
+        display: none;
+        font-size: 10px;
+    }
+}
+
+
 @media only screen and (max-width: 1200px)  {
 #nav{
     padding: 40px 60px;
@@ -393,6 +415,7 @@ html,body {
     font-size: 35px;
 }
 
+
 }
 
 
@@ -429,7 +452,7 @@ html,body {
     font-size: 12px;
 }
 #nav img{
-    width: 20%;
+    width: 70%;
 }
 
 .navlink{
@@ -454,7 +477,7 @@ html,body {
 }
 
 #hero div p{
-    font-size: 12px;
+    font-size: 16px;
     
 }
 
@@ -527,6 +550,7 @@ html,body {
 }
 }
 
+
 @media only screen and (max-width: 576px){
 .lastpart{
     gap: 150px;
@@ -576,7 +600,7 @@ html,body {
 }
 
 .main-footer{
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
 }
 
@@ -586,7 +610,48 @@ html,body {
 
 .go p{
     margin-top: 30px;
+    display: none;
 }
+
+.mc{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 40px;
+    align-items: center;
+}
+
+.mc p{
+    display: block;
+    font-size: 10px;
+}
+
+
+.navToggle{
+    display: block;
+  }
+
+  .get-started, .navToggle .close{
+    display: none;
+  }
+
+
+.navlink{
+    position: fixed;
+    left: 50%;
+    top: -40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 300px;
+    padding: 30px 0;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 7000px rgba(32, 32, 32, 0.329),
+                -10px -10px 700px rgba(32, 32, 32, 0.329);
+    transition: .5s;
+    border-radius: 10px;
+    z-index: 999;
+  }
+
 
 
 }
@@ -624,6 +689,7 @@ html,body {
     text-align: center;
     width: 100%;
     height: 100%;
+    padding: 40px 90px;
 }
 
 #red div p{
@@ -632,11 +698,18 @@ html,body {
 }
 
 #red div{
-    width: 80%;
+    width: 100%;
+}
+
+#red .bg1{
+    width: 350%;
+    top: -30%;
+    left: -98%;
 }
 
 .main1{
     flex-direction: column;
+    padding-bottom: 5px;
 }
 
 .main-head{
@@ -669,32 +742,73 @@ html,body {
     font-size: 16px;
 }
 
+#testimonials{
+    margin-bottom: 60px;
 }
 
-/* @media only screen and (max-width: 375px){
-    #hero{
-        flex-direction: column-reverse;
-    }
-    
-    #hero img{
-        width: 100%;
-    }
-    
-    #hero div{
-        width: 100%;
-        text-align: center;
-        padding: 20px 30px;
-    }
-    
-    #hero div h1{
-        font-size: 40px;
-    }
-    
-    #hero div p{
-        font-size: 16px;
-    }
-    
-    }
-     */
+#testimonials h1{
+    font-size: 30px;
+}
 
+#hero .bg{
+    top: -20%;
+    right: -20%;
+    width: 100%
+}
 
+.main-head img{
+    right: -50%;
+    top: -200%;
+    width: 80%;
+}
+
+}
+
+@media only screen and (max-width: 375px){
+#hero div{
+    width: 120%;
+    padding: 20px;
+}
+
+.main-head h1{
+    font-size: 30px;
+}
+
+.mainText,#hero div p,.main-head p{
+    font-size: 15px;
+}
+
+.main h2{
+    font-size: 15px;
+}
+
+#red .bg1{
+        
+    width: 620%;
+    top: -50%;
+    left: -185%
+}
+
+#red .btn{
+    padding: 14px 35px;
+}
+
+#red div p{
+    font-size: 25px;
+}
+
+.lastpart{
+    gap: 95px;
+    padding: 20px 0;
+}
+
+.main-footer img{
+    width: 80%;
+    padding-bottom: 0;
+}
+
+.navlink{
+    width: 280px;
+}
+
+}
